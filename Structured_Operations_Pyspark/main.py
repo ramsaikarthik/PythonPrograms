@@ -5,6 +5,7 @@ import pandas
 
 spark = SparkSession.builder.appName("Structured Data").config("spark.driver.memory","4g").config("spark.executor.memory","4g").getOrCreate()
 
+
 def schemaDefinition(path):
     dataFrame.printSchema()
 
