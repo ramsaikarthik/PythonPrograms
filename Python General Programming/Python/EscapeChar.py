@@ -24,3 +24,8 @@ lines
 """
 
 print(newString)
+
+#Include backslash in the string
+
+print(r"C:\RamSaiKarthik\Users\Documents\*.txt")
+print("C:\\RamSaiKarthik\\Users\\Documents\\*.txt")
