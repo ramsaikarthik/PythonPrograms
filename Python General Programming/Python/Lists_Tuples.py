@@ -10,6 +10,13 @@ print(list1)
 print("Ram is located at index: ",tuple1.index("Ram"))
 list1.append("Ram")
 print(list1)
+
+print("--------------------------------------------------------")
+print("Items in the list are: ")
+for item in list1:
+    print(item)
+print("--------------------------------------------------------")
+
 list1.sort()
 print(list1)
 list1.append(list2)
