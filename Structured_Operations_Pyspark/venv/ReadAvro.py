@@ -2,6 +2,7 @@ from pyspark.sql import SparkSession
 from pyspark.sql.types import *
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import *
+from dbutils import *
 
 
 spark = SparkSession.builder.appName("Structured Data").config("spark.driver.memory","4g").config("spark.executor.memory","4g").getOrCreate()
@@ -12,6 +13,9 @@ print("Total number of rows in dataFrame are: ",dataFrame.count())
 dataFrame.printSchema()
 print("AVRO dataframe is: ")
 dataFrame.show(5,False)
+
+
+file = dbutils.
 
 #Coalesce is to have the number of output files
 dataFrame.limit(50).coalesce(1).write.mode("overwrite").csv("D:\\PythonPrograms\\Structured_Operations_Pyspark\\OutputFiles\\AvroFile1", header=True)
