@@ -1,0 +1,13 @@
+a,b = input("Enter 2 numbers separated by space: ").split()
+a,b = int(a),int(b)
+def power(a,b):
+    if b==0:
+        return 1
+    elif int(b%2)==0:
+        print(b)
+        return (power(a,int(b/2))*power(a,int(b/2)))
+    else:
+        print(b)
+        return (a*power(a,int(b/2))*power(a,int(b/2)))
+
+print("{0} to the power of {1} is: ".format(a,b), power(a,b))
