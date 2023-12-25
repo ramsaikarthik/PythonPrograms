@@ -4,10 +4,10 @@ class Solution:
         Do not return anything, modify nums1 in-place instead.
         """
         if m==0 or len(nums1)==0:
-            nums1 = nums2[:n].sort()
-        if n==0 or len(nums2)==0:
-            nums1 = nums1[:m].sort()
-        if m>0 and n>0:
+            nums1 = nums2[0:n].sort()
+        elif n==0 or len(nums2)==0:
+            nums1 = nums1[0:m].sort()
+        elif m>0 and n>0:
             nums1 = nums1[0:m]
             nums2 = nums2[0:n]
             nums1+=nums2
@@ -30,7 +30,13 @@ nums1 = []
 m = 0
 nums2 = [1]
 n = 1
-print(nums1[0:m]+nums2[0:n])
-print(len(nums1))
-print(len(nums2))
+# nums3 = nums1[0:m]+nums2[0:n]
+# nums1 = nums1[0:m]
+# nums2 = nums2[0:n]
+# nums1+=nums2
+# print(nums1[0:m]+nums2[0:n])
+# print(len(nums1))
+# print(len(nums2))
+# print(len(nums3))
+# print(len(nums1))
 mer.merge(nums1, m, nums2, n)
